@@ -23,6 +23,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~assets/scss/main.scss',
+    '~assets/scss/_variables.scss',
+    '~assets/scss/_reset.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -36,7 +39,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/prismic',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

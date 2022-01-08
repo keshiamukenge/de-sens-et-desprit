@@ -1,7 +1,12 @@
 <template>
-  <Tutorial/>
+  <Test />
 </template>
 
 <script>
-export default {}
+import Test from '../components/Test.vue'
+export default {
+  components: {
+    Test,
+  },
+}
 </script>

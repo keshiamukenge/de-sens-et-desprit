@@ -1,12 +1,12 @@
 <template>
-  <Test />
+  <Header />
 </template>
 
 <script>
-import Test from '../components/Test.vue'
+import Header from '../partials/Header.vue'
 export default {
   components: {
-    Test,
+    Header,
   },
 }
 </script>

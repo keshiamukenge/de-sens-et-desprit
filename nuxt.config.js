@@ -47,6 +47,14 @@ export default {
     scss: ['./assets/scss/*.scss']
   },
 
+  prismic: {
+    endpoint: 'https://spadesensetdesprit.prismic.io/api/v2',
+    modern: true,
+    apiOptions: {
+      accessToken: 'MC5ZZG1raFJNQUFDVUFnZXYy.77-9KAl0Pu-_ve-_vWTvv702fW1pee-_ve-_ve-_ve-_ve-_vSk0Mu-_vWRr77-977-9Xu-_ve-_vTvvv70',
+    },
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content

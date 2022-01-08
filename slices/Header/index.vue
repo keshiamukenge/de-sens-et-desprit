@@ -1,12 +1,44 @@
 <template>
-  <section class="section">
-    <prismic-image :field="slice.primary.logo" />
-  </section>
+  <div class="header--container-items">
+    <NuxtLink
+      to="/"
+      class="link"
+      @mouseenter="hover.value = true"
+      @mouseleave="hover.value = false"
+    >
+      <prismic-rich-text :field="slice.primary.acceuilItem" />
+      <LinksAnimation :hover="hover.value" />
+    </NuxtLink>
+    <NuxtLink to="/Prestations" class="link">
+      <prismic-rich-text :field="slice.primary.prestationsItem" />
+      <LinksAnimation />
+    </NuxtLink>
+    <NuxtLink to="/Abonnements" class="link">
+      <prismic-rich-text :field="slice.primary.abonnementsItem" />
+      <LinksAnimation />
+    </NuxtLink>
+    <NuxtLink to="/Bonscadeaux" class="link">
+      <prismic-rich-text :field="slice.primary.BonsItem" />
+      <LinksAnimation />
+    </NuxtLink>
+    <!-- <button>
+      <prismic-rich-text :field="slice.primary.buttonRdvContent" />
+    </button> -->
+  </div>
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
+
+import LinksAnimation from './../../components/animations/LinksAnimation/LinksAnimation.vue'
+
 export default {
-  name: "Header",
+  name: 'Header',
+
+  components: {
+    LinksAnimation,
+  },
+
   props: {
     slice: {
       type: Object,
@@ -16,21 +48,17 @@ export default {
       },
     },
   },
+
+  data() {
+    return {
+      hover: ref(false),
+    }
+  },
 }
 </script>
 
 <style scoped>
-.section {
-  position: relative;
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
-a {
-  color: #111;
-}
-.title {
-  margin-bottom: 2em;
+.link {
+  margin: 0 20px;
 }
 </style>

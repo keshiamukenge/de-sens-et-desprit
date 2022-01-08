@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/prismic": "^1.4.0",
     "@prismicio/client": "^5.1.1",
     "@prismicio/vue": "^2.1.0",

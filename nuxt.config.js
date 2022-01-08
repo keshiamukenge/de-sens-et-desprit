@@ -1,4 +1,5 @@
 import smConfig from "./sm.json";
+require('dotenv').config()
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -47,6 +48,14 @@ export default {
     scss: ['./assets/scss/*.scss']
   },
 
+  prismic: {
+    endpoint: `${process.env.endpoint}`,
+    modern: true,
+    apiOptions: {
+      accessToken: `${process.env.accessToken}`,
+    },
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
@@ -54,6 +63,7 @@ export default {
     ["@nuxtjs/prismic", {
       endpoint: smConfig.apiEndpoint || "",
     }], ["nuxt-sm"],
+    '@nuxtjs/dotenv',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

@@ -1,2 +1,30 @@
+//Load fonts
+@import url('https://use.typekit.net/sok7arb.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+//Colors
 $main-color: #130a07;
-$secondary-color: #f8ede4;
+$secondary-color: #b45e41;
+$tertiary-color: #103932;
+$white-color: #f8ede4;
+
+//Fonts
+$font--h1: 'minerva-modern', sans-serif;
+$font--h2: 'minerva-modern', sans-serif;
+$font--h3: 'minerva-modern', sans-serif;
+$font--h4: 'minerva-modern', sans-serif;
+$font--body: 'Inter', sans-serif;
+
+$font--size-h1: 100px;
+$font--size-h2: 64px;
+$font--size-h3: 32px;
+$font--size-h4: 16px;
+$font--size-body: 100px;
+$font--size-footer: 14px;
+
+$font--weight-h1: 400;
+$font--weight-h2: 400;
+$font--weight-h3: 400;
+$font--weight-h4: 400;
+$font--weight-light-body: 300;
+$font--weight-bold-body: 700;

@@ -1,0 +1,28 @@
+{
+  "id": "dd971ba4-23f1-4e1f-bde3-7105b87899c4",
+  "uid": "explicabo-minus-corporis",
+  "type": "home_first_content",
+  "data": {
+    "home__title_part1": [
+      {
+        "type": "heading2",
+        "text": "Strategize open-source architectures",
+        "spans": []
+      }
+    ],
+    "home__p1_part1": [
+      {
+        "type": "paragraph",
+        "text": "Qui nostrud enim reprehenderit nostrud velit nulla.",
+        "spans": []
+      }
+    ],
+    "home__p2_part1": [
+      {
+        "type": "paragraph",
+        "text": "Deserunt Lorem eu occaecat nisi laborum sit aliqua in. Eiusmod amet consequat sit ex in mollit cupidatat incididunt pariatur veniam sit. Sunt non irure laboris sint laboris enim dolore.",
+        "spans": []
+      }
+    ]
+  }
+}

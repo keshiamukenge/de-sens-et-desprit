@@ -1,12 +1,15 @@
 <template>
-  <Test />
+  <div>
+    <slice-zone type="home" queryType="single" />
+  </div>
 </template>
 
 <script>
-import Test from '../components/Test.vue'
+import SliceZone from 'vue-slicezone'
+
 export default {
   components: {
-    Test,
+    SliceZone,
   },
 }
 </script>

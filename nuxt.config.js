@@ -18,7 +18,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" },
+      { rel: 'stylesheet', href: "https://use.typekit.net/sok7arb.css" },
     ]
   },
 
@@ -27,6 +29,7 @@ export default {
     '~assets/scss/main.scss',
     '~assets/scss/_variables.scss',
     '~assets/scss/_reset.scss',
+    '~assets/scss/fonts.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

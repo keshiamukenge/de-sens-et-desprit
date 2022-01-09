@@ -1,0 +1,36 @@
+{
+  "_cts": {
+    "home_first_content": {}
+  },
+  "slices": {
+    "HomeTextSection1": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "homeSection1P1": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "homeSection1P2": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Slider": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
+  }
+}

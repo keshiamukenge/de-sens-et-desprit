@@ -18,9 +18,32 @@ $font--size-h4: 16px;
 $font--size-body: 100px;
 $font--size-footer: 14px;
 
+$font--lineHeight-h2: 96px;
+$font--lineHeight-body: 24px;
+
 $font--weight-h1: 400;
 $font--weight-h2: 400;
 $font--weight-h3: 400;
 $font--weight-h4: 400;
 $font--weight-light-body: 300;
 $font--weight-bold-body: 700;
+
+//Mobile fonts
+$font--size-h2-mobile: 45px;
+
+$font--lineHeight-h2-mobile: 70px;
+
+//Responsives breakpoints
+$responsive--mobile-min: 320px;
+$responsive--mobile-max: 480px;
+
+$responsive--tablet-min: 481px;
+$responsive--tablet-max: 768px;
+
+$responsive--laptop-min: 769px;
+$responsive--laptop-max: 1024px;
+
+$responsive--desktop-min: 1025px;
+$responsive--desktop-max: 1200px;
+
+$responsive--desktop-large-min: 1201px;

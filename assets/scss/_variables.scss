@@ -18,6 +18,7 @@ $font--size-h4: 16px;
 $font--size-body: 100px;
 $font--size-footer: 14px;
 
+$font--lineHeight-h1: 60px;
 $font--lineHeight-h2: 96px;
 $font--lineHeight-body: 24px;
 
@@ -29,9 +30,13 @@ $font--weight-light-body: 300;
 $font--weight-bold-body: 700;
 
 //Mobile fonts
-$font--size-h2-mobile: 45px;
+$font--size-h1-mobile: 50px;
+$font--size-h2-mobile: 40px;
 
 $font--lineHeight-h2-mobile: 70px;
+
+//Tablet fonts
+$font--lineHeight-h1-tablet: 110px;
 
 //Responsives breakpoints
 $responsive--mobile-min: 320px;

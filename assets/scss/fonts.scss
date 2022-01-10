@@ -2,8 +2,10 @@ h1 {
   font-family: $font--h1;
   font-size: $font--size-h1;
   font-weight: $font--weight-h1;
-  color: $main-color;
+  color: $white-color;
   text-transform: uppercase;
+  text-align: left;
+  line-height: $font--lineHeight-h1;
 }
 
 h2 {
@@ -37,7 +39,17 @@ p {
   line-height: $font--lineHeight-body;
 }
 
+.section--home-hero-baseline {
+  p {
+    color: $white-color !important;
+  }
+}
+
 @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
+  h1 {
+    font-size: $font--size-h1-mobile;
+  }
+
   h2 {
     font-size: $font--size-h2-mobile;
     line-height: $font--lineHeight-h2-mobile;
@@ -45,9 +57,15 @@ p {
 }
 
 @media screen and (min-width: $responsive--tablet-min) and (max-width: $responsive--tablet-max) {
+  h1 {
+    line-height: $font--lineHeight-h1-tablet;
+  }
 }
 
 @media screen and (min-width: $responsive--laptop-min) and (max-width: $responsive--laptop-max) {
+  h1 {
+    line-height: $font--lineHeight-h1-tablet;
+  }
 }
 
 @media screen and (min-width: $responsive--desktop-min) and (max-width: $responsive--desktop-max) {

@@ -1,7 +1,13 @@
-html,
-body {
-  background-color: $white-color;
+html {
   box-sizing: border-box;
   overflow-x: hidden;
-  width: 100vw;
+
+  body {
+    background-color: $white-color;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 1500px;
+    margin: auto;
+  }
 }

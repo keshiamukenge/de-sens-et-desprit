@@ -31,6 +31,24 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "HomeHeroVideo": {
+      "default-slice": {
+        "primary": {
+          "HomeH1": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "HomeHeroBaseline": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,0 +1,44 @@
+{
+  "id": "home_hero_video",
+  "type": "SharedSlice",
+  "name": "HomeHeroVideo",
+  "description": "HomeHeroVideo",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HomeHeroVideo",
+      "primary": {
+        "HomeH1": {
+          "config": {
+            "label": "HomeH1",
+            "placeholder": "de Sens & d'Esprit",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          },
+          "type": "StructuredText"
+        },
+        "HomeHeroBaseline": {
+          "config": {
+            "label": "HomeHeroBaseline",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "homeHeroVideo": {
+          "config": {
+            "label": "homeHeroVideo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

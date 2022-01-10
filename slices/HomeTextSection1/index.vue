@@ -32,7 +32,7 @@ export default {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 70px 20%;
+  margin: 70px 20px;
   align-items: center;
 
   @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {

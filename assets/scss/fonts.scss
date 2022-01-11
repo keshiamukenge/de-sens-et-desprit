@@ -34,9 +34,16 @@ h4 {
 
 p {
   font-family: $font--body;
+  font-size: $font--size-body;
   color: $main-color;
   text-align: left;
   line-height: $font--lineHeight-body;
+}
+
+.cursor {
+  font-family: $font--h1;
+  color: $white-color;
+  font-size: $main-font;
 }
 
 .section--home-hero-baseline {

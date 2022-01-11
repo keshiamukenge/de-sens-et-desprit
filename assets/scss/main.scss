@@ -9,5 +9,13 @@ html {
     width: 100vw;
     max-width: 1500px;
     margin: auto;
+
+    .swiper-wrapper {
+      display: flex !important;
+
+      .swiper-slide {
+        width: 100% !important;
+      }
+    }
   }
 }

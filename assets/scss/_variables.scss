@@ -4,18 +4,22 @@ $secondary-color: #b45e41;
 $tertiary-color: #103932;
 $white-color: #f8ede4;
 
+//Typo
+$main-font: 'minerva-modern', sans-serif;
+$secondary-font: 'Inter', sans-serif;
+
 //Fonts
-$font--h1: 'minerva-modern', sans-serif;
-$font--h2: 'minerva-modern', sans-serif;
-$font--h3: 'minerva-modern', sans-serif;
-$font--h4: 'minerva-modern', sans-serif;
-$font--body: 'Inter', sans-serif;
+$font--h1: $main-font;
+$font--h2: $main-font;
+$font--h3: $main-font;
+$font--h4: $main-font;
+$font--body: $secondary-font;
 
 $font--size-h1: 100px;
 $font--size-h2: 64px;
 $font--size-h3: 32px;
 $font--size-h4: 16px;
-$font--size-body: 100px;
+$font--size-body: 16px;
 $font--size-footer: 14px;
 
 $font--lineHeight-h1: 60px;

@@ -1,6 +1,7 @@
 <template>
   <div>
     <slice-zone type="home" queryType="single" />
+    <slice-zone type="header" queryType="single" />
   </div>
 </template>
 

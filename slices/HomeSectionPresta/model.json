@@ -1,0 +1,53 @@
+{
+  "id": "home_section_presta",
+  "type": "SharedSlice",
+  "name": "HomeSectionPresta",
+  "description": "HomeSectionPresta",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HomeSectionPresta",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "imagePresta": {
+          "config": {
+            "label": "imagePresta",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "prestaCat": {
+          "config": {
+            "label": "prestaCat",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          },
+          "type": "StructuredText"
+        },
+        "icon": {
+          "config": {
+            "label": "icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}

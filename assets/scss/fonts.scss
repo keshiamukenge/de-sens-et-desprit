@@ -16,6 +16,7 @@ h2 {
   text-transform: uppercase;
   text-align: left;
   line-height: $font--lineHeight-h2;
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -23,6 +24,8 @@ h3 {
   font-size: $font--size-h3;
   font-weight: $font--weight-h3;
   color: $main-color;
+  width: fit-content;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -60,6 +63,7 @@ p {
   h2 {
     font-size: $font--size-h2-mobile;
     line-height: $font--lineHeight-h2-mobile;
+    margin-bottom: 0;
   }
 }
 

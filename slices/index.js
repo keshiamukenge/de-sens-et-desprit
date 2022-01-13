@@ -2,5 +2,6 @@
 
 export { default as Header } from './Header'
 export { default as HomeHeroVideo } from './HomeHeroVideo'
+export { default as HomeSectionPresta } from './HomeSectionPresta'
 export { default as HomeTextSection1 } from './HomeTextSection1'
 export { default as Slider } from './Slider'

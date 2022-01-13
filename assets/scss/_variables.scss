@@ -11,14 +11,14 @@ $secondary-font: 'Inter', sans-serif;
 //Fonts
 $font--h1: $main-font;
 $font--h2: $main-font;
-$font--h3: $main-font;
+$font--h3: $secondary-font;
 $font--h4: $main-font;
 $font--body: $secondary-font;
 
 $font--size-h1: 100px;
 $font--size-h2: 64px;
-$font--size-h3: 32px;
-$font--size-h4: 16px;
+$font--size-h3: 16px;
+$font--size-h4: 14px;
 $font--size-body: 16px;
 $font--size-footer: 14px;
 
@@ -28,7 +28,7 @@ $font--lineHeight-body: 24px;
 
 $font--weight-h1: 400;
 $font--weight-h2: 400;
-$font--weight-h3: 400;
+$font--weight-h3: 300;
 $font--weight-h4: 400;
 $font--weight-light-body: 300;
 $font--weight-bold-body: 700;

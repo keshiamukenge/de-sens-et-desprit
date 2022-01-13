@@ -17,5 +17,18 @@ html {
         width: 100% !important;
       }
     }
+
+    section {
+      margin-bottom: 100px;
+    }
+
+    .icon {
+      width: 21px;
+      height: 21px;
+    }
+
+    img {
+      object-fit: cover;
+    }
   }
 }

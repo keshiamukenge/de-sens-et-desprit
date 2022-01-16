@@ -15,5 +15,12 @@ export default {
     SliceZone,
     Header,
   },
+
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 4600)
+    })
+  },
 }
 </script>

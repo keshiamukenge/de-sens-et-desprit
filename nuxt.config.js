@@ -8,7 +8,7 @@ export default {
   ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'de-sens-et-desprit',
+    title: 'de sens et desprit',
     htmlAttrs: {
       lang: 'en'
     },
@@ -37,8 +37,15 @@ export default {
       href: "https://use.typekit.net/sok7arb.css"
     }]
   },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~assets/scss/main.scss', '~assets/scss/_variables.scss', '~assets/scss/_reset.scss', '~assets/scss/fonts.scss'],
+  loading: '~/components/Loader/Loader.vue',
+
+  render: {
+    resourceHints: false
+  },
+  
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -71,7 +78,6 @@ export default {
   // This is a bug with `getStoriesPaths` and Nuxt that is awaiting to be fixed
   generate: {
     fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA
-
   },
   storybook: {
     stories: [...getStoriesPaths()]

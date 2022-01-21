@@ -52,23 +52,58 @@
     },
     "Header": {
       "default-slice": {
-        "primary": {}
+        "primary": {
+          "acceuilItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "prestationsItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "BonsItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "abonnementsItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "HomeSectionPresta": {
       "default-slice": {
         "primary": {
-          "title": {
+          "acceuilItem": {
             "config": {
-              "patternType": "HEADING",
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
-          }
-        },
-        "items": {
-          "prestaCat": {
+          },
+          "prestationsItem": {
             "config": {
-              "patternType": "HEADING",
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "BonsItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "abonnementsItem": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }

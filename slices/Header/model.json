@@ -13,7 +13,68 @@
       "primary": {
         "logo": {
           "config": {
-            "label": "logo",
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "acceuilItem": {
+          "config": {
+            "label": "acceuilMenuItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "prestationsItem": {
+          "config": {
+            "label": "prestationsHeaderItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "BonsItem": {
+          "config": {
+            "label": "BonsHeaderItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "abonnementsItem": {
+          "config": {
+            "label": "abonnementsHeaderItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "buttonRdvContent": {
+          "config": {
+            "label": "buttonRdvContent",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "userItem": {
+          "config": {
+            "label": "userItem",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "cartItem": {
+          "config": {
+            "label": "cartItem",
             "constraint": {},
             "thumbnails": []
           },

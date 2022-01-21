@@ -20,6 +20,7 @@
     "@prismicio/client": "^5.1.1",
     "@prismicio/vue": "^2.1.0",
     "@vue/reactivity": "^3.2.26",
+    "@vue/runtime-core": "^3.2.27",
     "core-js": "^3.15.1",
     "gsap": "^3.9.1",
     "nuxt": "^2.15.7",

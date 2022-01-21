@@ -49,6 +49,13 @@ p {
   font-size: $main-font;
 }
 
+.loader-content {
+  font-family: $font--loader;
+  color: $white-color;
+  font-size: $font--size-loader;
+  text-transform: uppercase;
+}
+
 .section--home-hero-baseline {
   p {
     color: $white-color !important;

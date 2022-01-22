@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "home_first_content": {}
+    "home_first_content": {},
+    "mega-menu-image": {}
   },
   "slices": {
     "HomeTextSection1": {
@@ -154,6 +155,38 @@
             }
           },
           "homeContactMail": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "SubHeader": {
+      "default-slice": {
+        "primary": {
+          "subHeaderPrestaCatTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "subHeaderCatTitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "MegaMenuImg": {
+      "default-slice": {
+        "primary": {
+          "SubHeaderImgText": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

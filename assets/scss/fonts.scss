@@ -29,7 +29,19 @@ h4 {
   font-family: $font--h4;
   font-size: $font--size-h4;
   font-weight: $font--weight-h4;
-  color: $main-color;
+  color: $tertiary-color;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  width: fit-content;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $tertiary-color;
+    height: 0.5px;
+    width: 100%;
+    margin-top: 5px;
+  }
 }
 
 p {

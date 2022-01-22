@@ -42,12 +42,11 @@
 <script>
 import SliceZone from 'vue-slicezone'
 import { ref } from '@vue/reactivity'
-/* import { onMounted } from '@vue/runtime-core' */
 
 import DefaultSvg from '../../components/assets/Svg/DefaultSvg.vue'
 import Logo from '../../components/assets/Svg/Logo/Logo.vue'
 import IconCart from '../../components/assets/Svg/Icons/Cart/IconCart.vue'
-import IconUser from '../../components/assets/Svg/Icons/User/IconUser.vue'
+import IconUser from '../../components/assets/Svg/Icons/User/User.vue'
 import { colors } from './../../theme/colors/colors'
 
 export default {
@@ -64,6 +63,7 @@ export default {
       mainColor: colors.main,
       whiteColor: colors.white,
       backgroundColor: ref(false),
+      active: ref(false),
     }
   },
 
@@ -86,6 +86,14 @@ export default {
       window.addEventListener('scroll', () => {
         this.getScrollY()
       })
+    },
+
+    activeValue() {
+      this.active.value = true
+    },
+
+    inactiveValue() {
+      this.active.value = false
     },
   },
 }
@@ -133,7 +141,7 @@ header {
   transition: $transition;
 
   .header--content {
-    & > div {
+    .main-item {
       display: flex;
 
       p {
@@ -149,7 +157,7 @@ header {
   transition: $transition;
 
   .header--content {
-    & > div {
+    .main-item {
       p {
         color: $white-color;
       }

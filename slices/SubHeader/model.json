@@ -1,0 +1,46 @@
+{
+  "id": "sub_header",
+  "type": "SharedSlice",
+  "name": "SubHeader",
+  "description": "SubHeader",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SubHeader",
+      "primary": {
+        "subHeaderPrestaCatTitle": {
+          "config": {
+            "label": "Titre de la catétgorie",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "subHeaderCatTitle": {
+          "config": {
+            "label": "Sous menu - Titre de la prestation",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "subHeaderLink": {
+          "config": {
+            "label": "Lien de la prestation",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        }
+      }
+    }
+  ]
+}

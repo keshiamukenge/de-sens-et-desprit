@@ -125,6 +125,42 @@
         }
       }
     },
-    "HomeSectionContact": {}
+    "HomeSectionContact": {},
+    "HomeContactSection": {
+      "default-slice": {
+        "primary": {
+          "homeContactTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "homeContactAdress": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "homeContactHours": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "homeContactPhone": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "homeContactMail": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

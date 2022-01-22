@@ -1,0 +1,63 @@
+{
+  "id": "home_contact_section",
+  "type": "SharedSlice",
+  "name": "HomeContactSection",
+  "description": "HomeContactSection",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HomeContactSection",
+      "primary": {
+        "homeContactTitle": {
+          "config": {
+            "label": "homeContactTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "homeContactAdress": {
+          "config": {
+            "label": "homeContactAdress",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "homeContactHours": {
+          "config": {
+            "label": "homeContactHours",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "homeContactPhone": {
+          "config": {
+            "label": "homeContactPhone",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        },
+        "homeContactMail": {
+          "config": {
+            "label": "homeContactMail",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

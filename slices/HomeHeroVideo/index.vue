@@ -62,14 +62,16 @@ export default {
     margin-bottom: 50px;
 
     @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
-      padding-top: 120px;
       width: 230px;
+      padding-left: 25px;
+      margin-bottom: 20px;
     }
   }
 
   .section--home-hero-baseline {
     @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
       width: 220px;
+      padding-left: 20px;
     }
   }
 }

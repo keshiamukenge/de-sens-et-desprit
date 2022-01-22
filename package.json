@@ -27,7 +27,8 @@
     "nuxt-sm": "^0.0.9",
     "swiper": "^5.4.5",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-slicezone": "^0.1.0"
+    "vue-slicezone": "^0.1.0",
+    "vue2-google-maps": "^0.10.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

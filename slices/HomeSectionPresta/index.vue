@@ -175,13 +175,19 @@ export default {
 <style lang="scss" scoped>
 .home--section-presta {
   display: grid;
-  margin: 0 20px;
+  margin: 150px 0px;
+
+  @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
+    margin: 70px 0px;
+  }
 
   .home--section-presta-title {
     margin-left: 11.5%;
+    margin-bottom: 50px;
 
     @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
       margin-left: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -192,10 +198,14 @@ export default {
     position: relative;
 
     @media screen and (min-width: $responsive--laptop-min) and (max-width: $responsive--laptop-max) {
-      height: fit-content;
+      height: 400px;
     }
 
     @media screen and (min-width: $responsive--tablet-min) and (max-width: $responsive--tablet-max) {
+      height: 400px;
+    }
+
+    @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
       height: fit-content;
     }
 
@@ -237,6 +247,7 @@ export default {
       @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
         width: 100%;
         margin-top: 40px;
+        height: fit-content;
       }
 
       .home--container-presta-cat {
@@ -244,6 +255,30 @@ export default {
         top: 50%;
         left: 35%;
         transform: translate(-50%, -50%);
+
+        @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: translate(0px, 0px);
+          height: fit-content;
+          padding: 0 30px;
+          box-sizing: border-box;
+          padding-top: 30px;
+        }
+
+        @media screen and (min-width: $responsive--laptop-min) and (max-width: $responsive--laptop-max) {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transform: translate(0px, 0px);
+          height: fit-content;
+          padding: 0 30px;
+          box-sizing: border-box;
+          padding-top: 30px;
+        }
 
         @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
           position: initial;
@@ -257,6 +292,14 @@ export default {
           margin-bottom: 46px;
 
           @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
+            width: 100%;
+          }
+
+          @media screen and (min-width: $responsive--laptop-min) and (max-width: $responsive--laptop-max) {
+            width: 100%;
+          }
+
+          @media screen and (min-width: $responsive--tablet-min) and (max-width: $responsive--tablet-max) {
             width: 100%;
           }
 

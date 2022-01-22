@@ -29,7 +29,8 @@
     },
     "Slider": {
       "default-slice": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "HomeHeroVideo": {
@@ -107,8 +108,23 @@
               "blocks": 1
             }
           }
+        },
+        "items": {}
+      }
+    },
+    "HomeSectionPrestaCat": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "soinsSubCat": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
         }
       }
-    }
+    },
+    "HomeSectionContact": {}
   }
 }

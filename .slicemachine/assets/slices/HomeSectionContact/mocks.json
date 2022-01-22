@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "home_section_contact",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Exploit robust convergence",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Nulla cillum velit laboris qui et ex tempor in nulla reprehenderit in reprehenderit.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

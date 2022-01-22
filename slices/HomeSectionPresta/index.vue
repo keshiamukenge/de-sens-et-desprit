@@ -24,7 +24,24 @@
           >
             <div ref="items" class="presta-cat-icon">
               <prismic-rich-text :field="item.prestaCat" class="presta-cat" />
-              <prismic-image ref="icons" :field="item.icon" class="icon" />
+              <DefaultSvg
+                :width="16"
+                :height="16"
+                :icon-color="mainColor"
+                viewbox="0 0 16 16"
+                class="appear"
+              >
+                <IconMore />
+              </DefaultSvg>
+              <DefaultSvg
+                :width="16"
+                :height="2"
+                :icon-color="mainColor"
+                viewbox="0 0 16 2"
+                class="disappear"
+              >
+                <IconLess />
+              </DefaultSvg>
             </div>
             <span class="line"></span>
           </div>
@@ -38,8 +55,19 @@
 import { ref } from '@vue/reactivity'
 import GSAP from 'gsap'
 
+import DefaultSvg from './../../components/assets/Svg/DefaultSvg.vue'
+import IconMore from './../../components/assets/Svg/Icons/More/More.vue'
+import IconLess from './../../components/assets/Svg/Icons/Less/Less.vue'
+import { colors } from './../../theme/colors/colors'
+
 export default {
   name: 'HomeSectionPresta',
+  components: {
+    DefaultSvg,
+    IconMore,
+    IconLess,
+  },
+
   props: {
     slice: {
       type: Object,
@@ -55,6 +83,7 @@ export default {
       items: ref(null),
       img: ref(null),
       obj: [],
+      mainColor: colors.main,
     }
   },
 
@@ -62,8 +91,8 @@ export default {
     this.items = this.$refs.items
     this.img = this.$refs.img
     this.createObject(0)
-    this.rotateRight()
-    this.rotateLeft()
+    this.active()
+    this.inactive()
     this.scaleUp()
   },
 
@@ -73,25 +102,45 @@ export default {
         return this.obj.push({
           item,
           presta: item.childNodes[0],
-          icon: item.childNodes[2],
+          iconMore: item.childNodes[2],
+          iconLess: item.childNodes[4],
           img: this.img[start++],
+          active: ref(false),
         })
       })
     },
 
-    rotateRight() {
+    active() {
       this.obj.forEach((item) => {
         item.item.addEventListener('mouseenter', () => {
-          item.icon.style.transform = 'rotate(135deg)'
+          item.active.value = true
+          this.setValue()
         })
       })
     },
 
-    rotateLeft() {
+    inactive() {
       this.obj.forEach((item) => {
         item.item.addEventListener('mouseleave', () => {
-          item.icon.style.transform = 'rotate(0deg)'
+          item.active.value = false
+          this.setValue()
         })
+      })
+    },
+
+    setValue() {
+      this.obj.forEach((item) => {
+        if (item.active.value) {
+          item.iconMore.classList.add('disappear')
+          item.iconMore.classList.remove('appear')
+          item.iconLess.classList.add('appear')
+          item.iconLess.classList.remove('disappear')
+        } else {
+          item.iconMore.classList.add('appear')
+          item.iconMore.classList.remove('disappear')
+          item.iconLess.classList.add('disappear')
+          item.iconLess.classList.remove('appear')
+        }
       })
     },
 
@@ -218,6 +267,7 @@ export default {
           .presta-cat-icon {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             .icon {
               transition: 500ms linear;
@@ -241,6 +291,16 @@ export default {
     width: 100%;
     height: 100%;
     transition: 500ms linear;
+  }
+
+  .appear {
+    display: block;
+    transition: $transition;
+  }
+
+  .disappear {
+    display: none;
+    transition: $transition;
   }
 }
 </style>

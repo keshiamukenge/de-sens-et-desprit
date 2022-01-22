@@ -38,14 +38,6 @@
             "single": "heading3"
           },
           "type": "StructuredText"
-        },
-        "icon": {
-          "config": {
-            "label": "icon",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
         }
       }
     }

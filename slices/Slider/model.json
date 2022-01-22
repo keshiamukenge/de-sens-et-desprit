@@ -10,49 +10,17 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Slider",
-      "primary": {
-        "sliderImg1": {
+      "primary": {},
+      "items": {
+        "sliderImg": {
           "config": {
-            "label": "slider image 1",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
-        "sliderImg2": {
-          "config": {
-            "label": "slider image 2",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
-        "sliderImg3": {
-          "config": {
-            "label": "slider image 3",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
-        "sliderImg4": {
-          "config": {
-            "label": "slider image 4",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
-        "sliderImg5": {
-          "config": {
-            "label": "slider image 5",
+            "label": "sliderImg",
             "constraint": {},
             "thumbnails": []
           },
           "type": "Image"
         }
-      },
-      "items": {}
+      }
     }
   ]
 }

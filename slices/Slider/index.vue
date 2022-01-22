@@ -10,20 +10,8 @@
       <span ref="cursorContent">Drag</span>
     </div>
     <swiper :options="swiperOptions">
-      <swiper-slide>
-        <prismic-image :field="slice.primary.sliderImg1" />
-      </swiper-slide>
-      <swiper-slide>
-        <prismic-image :field="slice.primary.sliderImg2" />
-      </swiper-slide>
-      <swiper-slide>
-        <prismic-image :field="slice.primary.sliderImg3" />
-      </swiper-slide>
-      <swiper-slide>
-        <prismic-image :field="slice.primary.sliderImg4" />
-      </swiper-slide>
-      <swiper-slide>
-        <prismic-image :field="slice.primary.sliderImg5" />
+      <swiper-slide v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
+        <prismic-image :field="item.sliderImg" />
       </swiper-slide>
     </swiper>
   </section>

@@ -193,7 +193,6 @@ export default {
 
   .home--content-presta {
     display: flex;
-    /* width: 50%; */
     height: 500px;
     position: relative;
 

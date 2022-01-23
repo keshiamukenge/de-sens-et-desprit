@@ -1,0 +1,23 @@
+{
+  "id": "bc579152-1502-4b85-a211-0cf05b09e21f",
+  "uid": "neque-ut-eos",
+  "type": "mega-menu-image",
+  "data": {
+    "megaMenuImg": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+    },
+    "megaMenuImgText": [
+      {
+        "type": "paragraph",
+        "text": "Adipisicing sunt adipisicing cupidatat commodo minim eiusmod elit pariatur dolor veniam incididunt proident sit excepteur.",
+        "spans": []
+      }
+    ]
+  }
+}

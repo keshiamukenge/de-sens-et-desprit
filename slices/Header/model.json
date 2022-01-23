@@ -11,14 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Header",
       "primary": {
-        "logo": {
-          "config": {
-            "label": "Logo",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
         "acceuilItem": {
           "config": {
             "label": "acceuilMenuItem",
@@ -31,6 +23,15 @@
         "prestationsItem": {
           "config": {
             "label": "prestationsHeaderItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "lumiereHeaderItem": {
+          "config": {
+            "label": "lumiereHeaderItem",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -63,25 +64,19 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           },
           "type": "StructuredText"
-        },
-        "userItem": {
-          "config": {
-            "label": "userItem",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
-        "cartItem": {
-          "config": {
-            "label": "cartItem",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
         }
       },
-      "items": {}
+      "items": {
+        "prestaChildItem": {
+          "config": {
+            "label": "prestaChildItem",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        }
+      }
     }
   ]
 }

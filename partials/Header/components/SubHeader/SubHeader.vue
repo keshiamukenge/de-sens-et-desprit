@@ -70,7 +70,7 @@ export default {
   top: 70px;
   left: 0;
   right: 0;
-  padding: 15px 50px;
+  padding: 24px 0 36px 50px;
   box-sizing: border-box;
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

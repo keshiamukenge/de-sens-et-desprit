@@ -36,6 +36,5 @@ export default {
 
 .sous-cat-link {
   color: $main-color;
-  font-style: italic;
 }
 </style>

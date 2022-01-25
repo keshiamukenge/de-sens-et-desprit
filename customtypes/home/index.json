@@ -1,0 +1,37 @@
+{
+  "id": "home",
+  "label": "Acceuil",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice zone",
+        "config": {
+          "labels": {},
+          "choices": {
+            "home_text_section1": {
+              "type": "SharedSlice"
+            },
+            "slider": {
+              "type": "SharedSlice"
+            },
+            "home_hero_video": {
+              "type": "SharedSlice"
+            },
+            "home_presta_section2": {
+              "type": "SharedSlice"
+            },
+            "home_section_presta": {
+              "type": "SharedSlice"
+            },
+            "home_contact_section": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "status": true
+}

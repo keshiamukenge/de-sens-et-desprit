@@ -1,0 +1,22 @@
+{
+  "id": "header",
+  "label": "Header",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice zone",
+        "config": {
+          "labels": {},
+          "choices": {
+            "header": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  },
+  "status": true
+}

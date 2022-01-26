@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :defaultStyle="false" />
     <slice-zone type="home" queryType="single" />
   </div>
 </template>

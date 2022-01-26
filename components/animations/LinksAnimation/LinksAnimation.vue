@@ -1,5 +1,7 @@
 <template>
-  <span ref="line" :hover="hover"></span>
+  <div @mouseenter="slideIn" @mouseleave="slideOut">
+    <span ref="line"></span>
+  </div>
 </template>
 
 <script>
@@ -8,9 +10,9 @@ import GSAP from 'gsap'
 
 export default {
   props: {
-    hover: {
-      default: false,
-      type: Boolean,
+    animation: {
+      default: null,
+      type: Function,
     },
   },
 
@@ -18,16 +20,6 @@ export default {
     return {
       line: ref(null),
     }
-  },
-
-  watch: {
-    animate() {
-      if (this.$props.hover) {
-        this.slideIn()
-      } else {
-        this.slideOut()
-      }
-    },
   },
 
   mounted() {
@@ -38,14 +30,14 @@ export default {
     slideIn() {
       GSAP.to(this.line.value, {
         x: `100%`,
-        duration: 0.3,
+        duration: 0.7,
       })
     },
 
     slideOut() {
       GSAP.to(this.line.value, {
         x: `201%`,
-        duration: 0.3,
+        duration: 0.7,
       })
     },
   },
@@ -53,11 +45,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-span {
+div {
   width: 100%;
-  height: 1px;
-  transform: translateX(-101%);
-  background-color: $main-color;
-  display: block;
+  height: fit-content;
+
+  span {
+    width: 100%;
+    height: 1px;
+    transform: translateX(-101%);
+    background-color: $main-color;
+    display: block;
+  }
 }
 </style>

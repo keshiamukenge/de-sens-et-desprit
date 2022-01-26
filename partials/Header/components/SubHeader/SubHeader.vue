@@ -2,8 +2,8 @@
   <div
     class="container-mega-menu"
     :class="{
-      active: active.value,
-      inactive: !active.value,
+      active: active.hover,
+      inactive: !active.hover,
     }"
   >
     <slice-zone
@@ -35,28 +35,16 @@
 
 <script>
 import SliceZone from 'vue-slicezone'
-/* import { ref } from '@vue/reactivity' */
 
 export default {
   components: {
     SliceZone,
   },
 
-  props: {
-    active: {
-      default: false,
-      type: Boolean,
-    },
-  },
-
-  methods: {
-    activeValue() {
-      this.$props.active.value = true
-    },
-
-    inactiveValue() {
-      this.$props.active.value = false
-    },
+  data() {
+    return {
+      active: this.$store.getters,
+    }
   },
 }
 </script>
@@ -70,7 +58,7 @@ export default {
   top: 70px;
   left: 0;
   right: 0;
-  padding: 24px 0 36px 50px;
+  padding: 24px 0 36px 92px;
   box-sizing: border-box;
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

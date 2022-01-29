@@ -1,10 +1,13 @@
 <template>
   <div
+    ref="megamenu"
     class="container-mega-menu"
     :class="{
       active: active.hover,
       inactive: !active.hover,
     }"
+    @mouseenter="fixed"
+    @mouseleave="up"
   >
     <slice-zone
       type="mega_menu"
@@ -45,6 +48,16 @@ export default {
     return {
       active: this.$store.getters,
     }
+  },
+
+  methods: {
+    fixed() {
+      this.$store.dispatch('onMouseEnterAction')
+    },
+
+    up() {
+      this.$store.dispatch('onMouseLeaveAction')
+    },
   },
 }
 </script>

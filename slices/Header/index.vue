@@ -1,16 +1,21 @@
 <template>
   <div class="header--container-items">
-    <NuxtLink to="/" class="link">
+    <!-- <NuxtLink to="/" class="link">
       <prismic-rich-text :field="slice.primary.acceuilItem" class="main-item" />
-    </NuxtLink>
-    <NuxtLink to="/Prestations" class="link">
+      <LinksAnimation />
+    </NuxtLink> -->
+    <LinksAnimation pathLink="/" classLink="link">
+      <prismic-rich-text :field="slice.primary.acceuilItem" class="main-item" />
+    </LinksAnimation>
+    <LinksAnimation pathLink="/Prestations" classLink="link">
       <prismic-rich-text
         :field="slice.primary.prestationsItem"
         class="main-item"
         @mouseenter="onEnter"
         @mouseleave="onLeave"
       />
-    </NuxtLink>
+    </LinksAnimation>
+
     <NuxtLink to="/Prestations/Lumiere-pulsee" class="link">
       <prismic-rich-text
         :field="slice.primary.lumiereHeaderItem"
@@ -30,8 +35,15 @@
 </template>
 
 <script>
+import LinksAnimation from './../../components/animations/LinksAnimation/LinksAnimation.vue'
+
 export default {
   name: 'Header',
+
+  components: {
+    LinksAnimation,
+  },
+
   props: {
     slice: {
       type: Object,
@@ -48,7 +60,7 @@ export default {
     },
 
     onLeave() {
-      this.$store.dispatch('onMouseLeaveAction')
+      this.$store.dispatch('onMouseEnterAction')
     },
   },
 }
@@ -57,5 +69,10 @@ export default {
 <style lang="scss" scoped>
 .link {
   margin: 0 20px;
+  height: 100%;
+
+  .main-item {
+    height: 100%;
+  }
 }
 </style>

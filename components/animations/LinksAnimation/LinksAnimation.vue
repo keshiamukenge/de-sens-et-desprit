@@ -1,7 +1,13 @@
 <template>
-  <div @mouseenter="slideIn" @mouseleave="slideOut">
-    <span ref="line"></span>
-  </div>
+  <NuxtLink
+    :to="prop.pathLink"
+    :class="prop.classLink"
+    @mouseenter="slideIn"
+    @mouseleave="slideOut"
+  >
+    <slot></slot>
+    <span class="line" ref="line"></span>
+  </NuxtLink>
 </template>
 
 <script>
@@ -10,15 +16,26 @@ import GSAP from 'gsap'
 
 export default {
   props: {
-    animation: {
+    pathLink: {
+      default: '',
+      type: String,
+    },
+
+    classLink: {
       default: null,
-      type: Function,
+      type: String,
+    },
+
+    content: {
+      default: null,
+      type: HTMLElement,
     },
   },
 
   data() {
     return {
       line: ref(null),
+      prop: this.$props,
     }
   },
 
@@ -28,14 +45,18 @@ export default {
 
   methods: {
     slideIn() {
-      GSAP.to(this.line.value, {
+      GSAP.to('.line', {
         x: `100%`,
         duration: 0.7,
+        backgroundColor: 'red',
+        onComplete: () => {
+          this.slideOut()
+        },
       })
     },
 
     slideOut() {
-      GSAP.to(this.line.value, {
+      GSAP.to('.line', {
         x: `201%`,
         duration: 0.7,
       })
@@ -55,6 +76,7 @@ div {
     transform: translateX(-101%);
     background-color: $main-color;
     display: block;
+    margin-top: 5px;
   }
 }
 </style>

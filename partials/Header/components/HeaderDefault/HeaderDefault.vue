@@ -74,7 +74,7 @@ header {
   z-index: 999;
   width: 100vw;
   height: 70px;
-  padding: 13px 92px;
+  padding: 13px 92px 0 92px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;

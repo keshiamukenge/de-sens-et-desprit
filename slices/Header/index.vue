@@ -30,6 +30,11 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
+
+import LinksAnimation from './../../components/animations/LinksAnimation/LinksAnimation.vue'
+
+
 export default {
   name: 'Header',
   props: {

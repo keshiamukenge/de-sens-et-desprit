@@ -15,6 +15,7 @@
 
 
 
+
 export default {
   props: {
 
@@ -38,15 +39,21 @@ export default {
 <style scoped>
 div{
     width: 136px;
-    height: 42px;
-    border: 2px solid;
-    background-color: white;
+    border: 2px solid #130a07;
+    background-color: transparent;
     text-align: center;
+    border-radius: 2px;
+    padding: 11px 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
 }
 .primary{
-  background-color: yellow;
+  background-color: transparent;
+  color: #130a07;
 }
 .secondary{
-  background-color: green;
+  background-color: #69140E;
+  color: #F8EDE4;
+  border: none;
 }
 </style>

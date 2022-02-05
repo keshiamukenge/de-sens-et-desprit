@@ -31,6 +31,11 @@ export default {
 .cat-title {
   h4 {
     margin-bottom: 10px;
+    color: $tertiary-color;
+
+    &::after {
+      background-color: $tertiary-color;
+    }
   }
 }
 

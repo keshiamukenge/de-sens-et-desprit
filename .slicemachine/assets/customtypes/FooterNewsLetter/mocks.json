@@ -1,0 +1,36 @@
+{
+  "id": "813a7b1e-3d5d-4b26-b2c1-d6feb15bc7f3",
+  "uid": "dignissimos-eum-rerum",
+  "type": "FooterNewsLetter",
+  "data": {
+    "newsletterTitle": [
+      {
+        "type": "paragraph",
+        "text": "Sint minim dolor labore officia ut commodo pariatur velit amet aliqua.",
+        "spans": []
+      }
+    ],
+    "IntagramLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "IntagramTitle": [
+      {
+        "type": "paragraph",
+        "text": "Nisi proident aliquip esse labore enim aute. Ut aute nostrud in dolor labore aute commodo adipisicing minim nostrud quis culpa duis voluptate consectetur.",
+        "spans": []
+      }
+    ],
+    "FacebookLink": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
+    },
+    "FacebookTitle": [
+      {
+        "type": "paragraph",
+        "text": "Sint enim ullamco dolore amet. Consectetur exercitation in fugiat qui minim et id dolor pariatur. Non eu laboris eiusmod.",
+        "spans": []
+      }
+    ]
+  }
+}

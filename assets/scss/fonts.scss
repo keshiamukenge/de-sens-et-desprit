@@ -29,7 +29,6 @@ h4 {
   font-family: $font--h4;
   font-size: $font--size-h4;
   font-weight: $font--weight-h4;
-  color: $tertiary-color;
   text-transform: uppercase;
   margin-bottom: 10px;
   width: fit-content;
@@ -37,7 +36,6 @@ h4 {
   &::after {
     content: '';
     display: block;
-    background-color: $tertiary-color;
     height: 1px;
     width: 15px;
     margin: 16px 0;

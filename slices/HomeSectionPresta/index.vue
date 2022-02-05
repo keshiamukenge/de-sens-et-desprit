@@ -30,6 +30,7 @@
                 :icon-color="mainColor"
                 viewbox="0 0 16 16"
                 class="appear"
+                ref="iconMore"
               >
                 <IconMore />
               </DefaultSvg>
@@ -39,6 +40,7 @@
                 :icon-color="mainColor"
                 viewbox="0 0 16 2"
                 class="disappear"
+                ref="iconLess"
               >
                 <IconLess />
               </DefaultSvg>
@@ -80,90 +82,72 @@ export default {
 
   data() {
     return {
-      items: ref(null),
-      img: ref(null),
-      obj: [],
+      category: ref(null),
+      image: ref(null),
+      iconMore: ref(null),
+      iconLess: ref(null),
+      list: ref(null),
+      prestations: ref([]),
+      active: ref(null),
       mainColor: colors.main,
     }
   },
 
   mounted() {
-    this.items = this.$refs.items
-    this.img = this.$refs.img
-    this.createObject(0)
-    this.active()
-    this.inactive()
-    this.scaleUp()
+    this.category = this.$refs.items
+    this.image = this.$refs.img
+    this.iconMore = this.$refs.iconMore
+    this.iconLess = this.$refs.iconLess
+
+    for (let i = 0; i < this.$props.slice.items.length; i++) {
+      this.prestations.value.push(
+        this.createObject(
+          this.category[i],
+          this.image[i],
+          this.iconMore[i],
+          this.iconLess[i]
+        )
+      )
+    }
+
+    this.onHover()
+    this.onLeave()
   },
 
   methods: {
-    createObject(start) {
-      return this.items.map((item) => {
-        return this.obj.push({
-          item,
-          presta: item.childNodes[0],
-          iconMore: item.childNodes[2],
-          iconLess: item.childNodes[4],
-          img: this.img[start++],
-          active: ref(false),
+    createObject(category, image, iconMore, iconLess) {
+      return {
+        category,
+        image,
+        iconMore,
+        iconLess,
+      }
+    },
+
+    onHover() {
+      this.prestations.value.forEach((item) => {
+        item.category.addEventListener('mouseenter', () => {
+          this.appearImg(item.image)
+          this.active.value = item.image
         })
       })
     },
 
-    active() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseenter', () => {
-          item.active.value = true
-          this.setValue()
-        })
+    appearImg(img) {
+      GSAP.to(img, {
+        opacity: 1,
+        zIndex: 1,
+        duration: 0.5,
       })
     },
 
-    inactive() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseleave', () => {
-          item.active.value = false
-          this.setValue()
-        })
-      })
-    },
-
-    setValue() {
-      this.obj.forEach((item) => {
-        if (item.active.value) {
-          item.iconMore.classList.add('disappear')
-          item.iconMore.classList.remove('appear')
-          item.iconLess.classList.add('appear')
-          item.iconLess.classList.remove('disappear')
-        } else {
-          item.iconMore.classList.add('appear')
-          item.iconMore.classList.remove('disappear')
-          item.iconLess.classList.add('disappear')
-          item.iconLess.classList.remove('appear')
-        }
-      })
-    },
-
-    scaleUp() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseenter', () => {
-          GSAP.to(item.img, {
-            zIndex: 1,
-            opacity: 1,
-            duration: 0.8,
-            onComplete: this.scaleDown(),
-          })
-        })
-      })
-    },
-
-    scaleDown() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseleave', () => {
-          GSAP.to(item.img, {
+    onLeave() {
+      this.prestations.value.forEach((item) => {
+        item.category.addEventListener('mouseleave', () => {
+          GSAP.to(this.active.value, {
             opacity: 0,
-            zIndex: 1,
-            duration: 0.8,
+            zIndex: -1,
+            duration: 0.5,
           })
         })
       })

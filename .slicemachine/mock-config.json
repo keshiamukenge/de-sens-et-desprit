@@ -195,6 +195,11 @@
         }
       }
     },
-    "Test": {}
+    "Test": {},
+    "HomeSectionSubPrestas": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
   }
 }

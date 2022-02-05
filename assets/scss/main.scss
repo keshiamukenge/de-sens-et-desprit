@@ -37,5 +37,10 @@ html {
     img {
       object-fit: cover;
     }
+
+    .up {
+      transform: translateY(50px);
+      opacity: 0;
+    }
   }
 }

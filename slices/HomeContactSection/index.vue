@@ -2,7 +2,13 @@
   <section class="home--section-contact">
     <div class="container-contact-content">
       <div class="container-google-map">
-        <div class="google-map">GOOGLE MAP</div>
+        <div class="google-map">
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJr8CWBw2YlEcRQvihva4bxXI&key=${apiKey}`"
+          ></iframe>
+        </div>
       </div>
 
       <div class="container-contact-infos">
@@ -106,6 +112,7 @@ export default {
   data() {
     return {
       whiteColor: colors.white,
+      apiKey: process.env.googleMapApiKey,
     }
   },
 }
@@ -155,6 +162,11 @@ export default {
       position: relative;
       padding: 40px;
       box-sizing: border-box;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
 
       @media screen and (min-width: $responsive--mobile-min) and (max-width: $responsive--mobile-max) {
         padding: 0px;
@@ -215,7 +227,7 @@ export default {
 
       .item-contact-icon {
         display: flex;
-        padding: 20px 0px;
+        padding: 10px 0px;
         align-items: center;
 
         .contact-item {

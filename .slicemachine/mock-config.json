@@ -1,7 +1,8 @@
 {
   "_cts": {
     "home_first_content": {},
-    "mega-menu-image": {}
+    "mega-menu-image": {},
+    "FooterNewsLetter": {}
   },
   "slices": {
     "HomeTextSection1": {
@@ -195,6 +196,30 @@
         }
       }
     },
-    "Test": {}
+    "Test": {},
+    "FooterLinks": {
+      "default-slice": {
+        "primary": {
+          "CatTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "FooterNewsletter": {
+      "default-slice": {
+        "primary": {
+          "newsletterTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

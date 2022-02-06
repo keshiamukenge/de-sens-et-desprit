@@ -8,7 +8,7 @@ export default {
   ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'de sens et desprit',
+    title: 'De sens et desprit',
     htmlAttrs: {
       lang: 'en'
     },

@@ -6,7 +6,7 @@
     }"
   >
     <div class="header--container-logo">
-      <NuxtLink to="/">
+      <LinksAnimation to="/">
         <DefaultSvg
           :width="17"
           :height="43"
@@ -15,7 +15,7 @@
         >
           <Logo />
         </DefaultSvg>
-      </NuxtLink>
+      </LinksAnimation>
     </div>
     <slice-zone type="header" query-type="single" class="header--content" />
     <div class="header--container-icons-profile">
@@ -48,6 +48,7 @@ import Logo from '../../../../components/assets/Svg/Logo/Logo.vue'
 import IconCart from '../../../../components/assets/Svg/Icons/Cart/IconCart.vue'
 import IconUser from '../../../../components/assets/Svg/Icons/User/User.vue'
 import SubHeader from './../SubHeader/SubHeader.vue'
+import LinksAnimation from './../../../../components/animations/LinksAnimation/LinksAnimation.vue'
 import { colors } from './../../../../theme/colors/colors'
 
 export default {
@@ -58,6 +59,7 @@ export default {
     IconCart,
     IconUser,
     SubHeader,
+    LinksAnimation,
   },
 
   props: {

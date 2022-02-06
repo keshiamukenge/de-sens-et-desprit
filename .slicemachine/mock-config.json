@@ -2,7 +2,33 @@
   "_cts": {
     "home_first_content": {},
     "mega-menu-image": {},
-    "FooterNewsLetter": {}
+    "FooterNewsLetter": {},
+    "footer": {
+      "HoraireTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "adresse": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "InstitutTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "NewsletterTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "HomeTextSection1": {
@@ -200,13 +226,32 @@
     "FooterLinks": {
       "default-slice": {
         "primary": {
-          "CatTitle": {
+          "HoraireTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "CoordonneesTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "NewsletterTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "InstitutTitle": {
             "config": {
               "patternType": "HEADING",
               "blocks": 1
             }
           }
-        }
+        },
+        "items": {}
       }
     },
     "FooterNewsletter": {
@@ -215,6 +260,29 @@
           "newsletterTitle": {
             "config": {
               "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Cgv": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "TextPage": {
+      "default-slice": {
+        "primary": {
+          "TitlePage": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "ContentPage": {
+            "config": {
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }

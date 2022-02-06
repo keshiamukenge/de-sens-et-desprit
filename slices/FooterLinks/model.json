@@ -11,36 +11,152 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "FooterLinks",
       "primary": {
-        "CatTitle": {
+        "HoraireTitle": {
           "config": {
-            "label": "CatTitle",
+            "label": "HoraireTitle",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "heading4"
           },
           "type": "StructuredText"
-        }
-      },
-      "items": {
-        "linkCat": {
+        },
+        "HoraireContent": {
           "config": {
-            "label": "linkCat",
+            "label": "HoraireContent",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "CoordonneesTitle": {
+          "config": {
+            "label": "CoordonneesTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          },
+          "type": "StructuredText"
+        },
+        "adresse": {
+          "config": {
+            "label": "adresse",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "Tel": {
+          "config": {
+            "label": "Tel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "email": {
+          "config": {
+            "label": "email",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "InstitutTitle": {
+          "config": {
+            "label": "InstitutTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          },
+          "type": "StructuredText"
+        },
+        "Cgv": {
+          "config": {
+            "label": "Cgv",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "Livraisons": {
+          "config": {
+            "label": "Livraisons",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "Plandusite": {
+          "config": {
+            "label": "Plandusite",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "MentionsLegales": {
+          "config": {
+            "label": "MentionsLegales",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "NewsletterTitle": {
+          "config": {
+            "label": "NewsletterTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          },
+          "type": "StructuredText"
+        },
+        "InstagramLink": {
+          "config": {
+            "label": "InstagramLink",
             "placeholder": "",
             "select": "web",
             "allowTargetBlank": false
           },
           "type": "Link"
         },
-        "TextCat": {
+        "InstagramTitle": {
           "config": {
-            "label": "TextCat",
+            "label": "InstagramTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "FacebookLink": {
+          "config": {
+            "label": "FacebookLink",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "FacebookTitle": {
+          "config": {
+            "label": "FacebookTitle",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           },
           "type": "StructuredText"
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

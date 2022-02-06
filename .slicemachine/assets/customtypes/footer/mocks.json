@@ -1,0 +1,113 @@
+{
+  "id": "7824461f-3ff2-4f93-b5d4-711c9835f472",
+  "uid": "est-rerum-provident",
+  "type": "footer",
+  "data": {
+    "HoraireTitle": [
+      {
+        "type": "heading4",
+        "text": "Maximize scalable e-business",
+        "spans": []
+      }
+    ],
+    "HoraireContent": [
+      {
+        "type": "paragraph",
+        "text": "Magna laborum occaecat aliqua sint est mollit adipisicing eiusmod est et in Lorem in sunt reprehenderit.",
+        "spans": []
+      }
+    ],
+    "CoordonneesTitle": [
+      {
+        "type": "paragraph",
+        "text": "Amet ut sunt exercitation.",
+        "spans": []
+      }
+    ],
+    "adresse": [
+      {
+        "type": "paragraph",
+        "text": "Officia incididunt pariatur enim reprehenderit adipisicing ullamco officia elit.",
+        "spans": []
+      }
+    ],
+    "tel": [
+      {
+        "type": "paragraph",
+        "text": "Sunt duis aute ex culpa do ut sint excepteur nulla et duis est ullamco ullamco.",
+        "spans": []
+      }
+    ],
+    "email": [
+      {
+        "type": "paragraph",
+        "text": "Duis ut ullamco est enim et et culpa anim esse exercitation. Id ipsum proident dolore qui reprehenderit aliqua Lorem aliqua reprehenderit id elit veniam culpa nostrud adipisicing.",
+        "spans": []
+      }
+    ],
+    "InstitutTitle": [
+      {
+        "type": "heading4",
+        "text": "Disintermediate out-of-the-box web-readiness",
+        "spans": []
+      }
+    ],
+    "Cgv": [
+      {
+        "type": "paragraph",
+        "text": "Sint ea enim nisi est aliqua anim in.",
+        "spans": []
+      }
+    ],
+    "Livraisons": [
+      {
+        "type": "paragraph",
+        "text": "Magna sit cillum veniam consequat sunt est consequat laborum proident anim laborum cupidatat elit nulla reprehenderit. Consequat esse fugiat proident ipsum aliqua excepteur Lorem proident ad et qui commodo duis minim aute. Commodo incididunt consectetur pariatur qui do qui aliqua.",
+        "spans": []
+      }
+    ],
+    "Plandusite": [
+      {
+        "type": "paragraph",
+        "text": "Est pariatur ut sit pariatur amet eu ea excepteur officia amet sit esse consectetur consectetur.",
+        "spans": []
+      }
+    ],
+    "MentionsLegale": [
+      {
+        "type": "paragraph",
+        "text": "Irure amet consectetur dolor nisi reprehenderit.",
+        "spans": []
+      }
+    ],
+    "NewsletterTitle": [
+      {
+        "type": "heading4",
+        "text": "Evolve dynamic channels",
+        "spans": []
+      }
+    ],
+    "InstagramLink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "InstagramTitle": [
+      {
+        "type": "paragraph",
+        "text": "Minim do nostrud cupidatat id occaecat id est sit quis consequat dolor. Voluptate enim commodo incididunt.",
+        "spans": []
+      }
+    ],
+    "FacebookLink": {
+      "link_type": "Web",
+      "url": "http://twitter.com"
+    },
+    "FacebookTitle": [
+      {
+        "type": "paragraph",
+        "text": "Nisi in Lorem eu reprehenderit proident. Sint irure quis Lorem adipisicing sint anim voluptate aliqua dolore sunt commodo Lorem anim.",
+        "spans": []
+      }
+    ]
+  }
+}

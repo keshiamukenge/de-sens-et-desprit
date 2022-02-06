@@ -1,37 +1,44 @@
 <template>
   <div class="header--container-items">
-    <NuxtLink to="/" class="link">
+    <LinksAnimation to="/">
       <prismic-rich-text :field="slice.primary.acceuilItem" class="main-item" />
-    </NuxtLink>
-    <NuxtLink to="/Prestations" class="link">
+    </LinksAnimation>
+    <LinksAnimation to="/Prestations" class="link">
       <prismic-rich-text
         :field="slice.primary.prestationsItem"
         class="main-item"
         @mouseenter="onEnter"
         @mouseleave="onLeave"
       />
-    </NuxtLink>
-    <NuxtLink to="/Prestations/Lumiere-pulsee" class="link">
+    </LinksAnimation>
+    <LinksAnimation to="/Prestations/Lumiere-pulsee" class="link">
       <prismic-rich-text
         :field="slice.primary.lumiereHeaderItem"
         class="main-item"
       />
-    </NuxtLink>
-    <NuxtLink to="/Abonnements" class="link">
+    </LinksAnimation>
+    <LinksAnimation to="/Abonnements" class="link">
       <prismic-rich-text
         :field="slice.primary.abonnementsItem"
         class="main-item"
       />
-    </NuxtLink>
-    <NuxtLink to="/Bonscadeaux" class="link">
+    </LinksAnimation>
+    <LinksAnimation to="/Bonscadeaux" class="link">
       <prismic-rich-text :field="slice.primary.BonsItem" class="main-item" />
-    </NuxtLink>
+    </LinksAnimation>
   </div>
 </template>
 
 <script>
+import LinksAnimation from './../../components/animations/LinksAnimation/LinksAnimation.vue'
+
 export default {
   name: 'Header',
+
+  components: {
+    LinksAnimation,
+  },
+
   props: {
     slice: {
       type: Object,

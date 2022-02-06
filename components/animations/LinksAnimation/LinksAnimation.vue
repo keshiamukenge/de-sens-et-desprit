@@ -1,7 +1,7 @@
 <template>
-  <div @mouseenter="slideIn" @mouseleave="slideOut">
-    <span ref="line"></span>
-  </div>
+  <NuxtLink :to="to">
+    <slot />
+  </NuxtLink>
 </template>
 
 <script>
@@ -10,9 +10,10 @@ import GSAP from 'gsap'
 
 export default {
   props: {
-    animation: {
-      default: null,
-      type: Function,
+    to: {
+      default: '',
+      type: String,
+      require: true,
     },
   },
 

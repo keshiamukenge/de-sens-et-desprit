@@ -1,7 +1,7 @@
 <template>
   <header class="white">
     <div class="header--container-logo">
-      <LinksAnimation to="/">
+      <Link to="/">
         <DefaultSvg
           :width="17"
           :height="43"
@@ -10,7 +10,7 @@
         >
           <Logo />
         </DefaultSvg>
-      </LinksAnimation>
+      </Link>
     </div>
     <slice-zone type="header" query-type="single" class="header--content" />
     <div class="header--container-icons-profile">
@@ -42,8 +42,8 @@ import DefaultSvg from '../../../../components/assets/Svg/DefaultSvg.vue'
 import Logo from '../../../../components/assets/Svg/Logo/Logo.vue'
 import IconCart from '../../../../components/assets/Svg/Icons/Cart/IconCart.vue'
 import IconUser from '../../../../components/assets/Svg/Icons/User/User.vue'
+import Link from '../../../../components/animations/Link/Link.vue'
 import SubHeader from './../SubHeader/SubHeader.vue'
-import LinksAnimation from './../../../../components/animations/LinksAnimation/LinksAnimation.vue'
 import { colors } from './../../../../theme/colors/colors'
 
 export default {
@@ -54,7 +54,7 @@ export default {
     IconCart,
     IconUser,
     SubHeader,
-    LinksAnimation,
+    Link,
   },
 
   data() {
@@ -76,7 +76,7 @@ header {
   z-index: 999;
   width: 100vw;
   height: 70px;
-  padding: 13px 92px;
+  padding: 0px 92px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -91,6 +91,8 @@ header {
       display: flex;
       align-items: center;
       height: 100%;
+      padding: 13px 0;
+      box-sizing: border-box;
     }
   }
 

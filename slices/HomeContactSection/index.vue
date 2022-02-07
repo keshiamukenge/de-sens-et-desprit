@@ -6,7 +6,7 @@
           <iframe
             loading="lazy"
             allowfullscreen
-            :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJr8CWBw2YlEcRQvihva4bxXI&key=${apiKey}`"
+            :src="`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJr8CWBw2YlEcRQvihva4bxXI&key=${apiKey.value}`"
           ></iframe>
         </div>
       </div>
@@ -82,6 +82,8 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
+
 import DefaultSvg from './../../components/assets/Svg/DefaultSvg.vue'
 import IconPin from './../../components/assets/Svg/Icons/Pin/Pin.vue'
 import IconClock from './../../components/assets/Svg/Icons/Clock/Clock.vue'
@@ -112,7 +114,7 @@ export default {
   data() {
     return {
       whiteColor: colors.white,
-      apiKey: process.env.googleMapApiKey,
+      apiKey: ref(process.env.googleMapApiKey),
     }
   },
 }

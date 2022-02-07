@@ -288,6 +288,11 @@
           }
         }
       }
+    },
+    "ImageSousMenu": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   }
 }

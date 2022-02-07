@@ -15,27 +15,27 @@
     </div>
     <div class="footer-container-link">
       <prismic-rich-text :field="slice.primary.InstitutTitle" />
-      <LinksAnimation to="/ cgv" class="link">
+      <Link to="/ cgv" class="link">
         <prismic-rich-text :field="slice.primary.Cgv" class="footer-link" />
-      </LinksAnimation>
-      <LinksAnimation to="/livraisons" class="link">
+      </Link>
+      <Link to="/livraisons" class="link">
         <prismic-rich-text
           :field="slice.primary.Livraisons"
           class="footer-link"
         />
-      </LinksAnimation>
-      <LinksAnimation to="/planDuSite" class="link">
+      </Link>
+      <Link to="/planDuSite" class="link">
         <prismic-rich-text
           :field="slice.primary.Plandusite"
           class="footer-link"
         />
-      </LinksAnimation>
-      <LinksAnimation to="/mentionsLegales" class="link">
+      </Link>
+      <Link to="/mentionsLegales" class="link">
         <prismic-rich-text
           :field="slice.primary.MentionsLegales"
           class="footer-link"
         />
-      </LinksAnimation>
+      </Link>
     </div>
     <div class="container-newsletter">
       <prismic-rich-text :field="slice.primary.NewsletterTitle" />
@@ -53,13 +53,13 @@
 </template>
 
 <script>
-import LinksAnimation from './../../components/animations/LinksAnimation/LinksAnimation.vue'
+import Link from '../../components/animations/Link/Link.vue'
 
 export default {
   name: 'FooterLinks',
 
   components: {
-    LinksAnimation,
+    Link,
   },
 
   props: {

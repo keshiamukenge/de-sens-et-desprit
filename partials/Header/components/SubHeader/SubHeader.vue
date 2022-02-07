@@ -30,6 +30,7 @@
       uid="sous-menu-beaute"
       class="container-cat"
     />
+    <slice-zone type="subheaderimg" queryType="single" />
   </div>
 </template>
 
@@ -52,19 +53,21 @@ export default {
 <style lang="scss" scoped>
 .container-mega-menu {
   background-color: $white-color;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   position: absolute;
   top: 70px;
   left: 0;
   right: 0;
-  padding: 24px 0 36px 92px;
+  padding: 24px 92px 36px 92px;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 32%;
+  grid-template-rows: 230px;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
   .container-cat {
-    margin-right: 100px;
+    margin-right: 40px;
   }
 }
 

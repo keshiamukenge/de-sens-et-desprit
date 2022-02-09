@@ -101,7 +101,6 @@ header {
 
       .link {
         height: 100%;
-        padding: 13px 0;
       }
     }
   }

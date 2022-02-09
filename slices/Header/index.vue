@@ -1,36 +1,60 @@
 <template>
-  <div class="header--container-items">
-    <Link to="/">
-      <prismic-rich-text :field="slice.primary.acceuilItem" class="main-item" />
+  <div ref="containerLinks" class="header--container-items">
+    <Link
+      ref="link"
+      to="/"
+      :lineColor="state.white ? mainColor : whiteColor"
+      bottom="25%"
+    >
+      <prismic-rich-text
+        :field="slice.primary.acceuilItem"
+        class="header-item"
+      />
     </Link>
-    <Link to="/Prestations" class="link">
+    <Link ref="link" to="/Prestations" :lineColor="mainColor" bottom="25%">
       <prismic-rich-text
         :field="slice.primary.prestationsItem"
-        class="main-item"
+        class="header-item"
         @mouseenter="onEnter"
         @mouseleave="onLeave"
       />
     </Link>
-    <Link to="/Prestations/Lumiere-pulsee" class="link">
+    <Link
+      ref="link"
+      to="/Prestations/Lumiere-pulsee"
+      :lineColor="state.white ? mainColor : whiteColor"
+      bottom="25%"
+    >
       <prismic-rich-text
         :field="slice.primary.lumiereHeaderItem"
-        class="main-item"
+        class="header-item"
       />
     </Link>
-    <Link to="/Abonnements" class="link">
+    <Link
+      ref="link"
+      to="/Abonnements"
+      :lineColor="state.white ? mainColor : whiteColor"
+      bottom="25%"
+    >
       <prismic-rich-text
         :field="slice.primary.abonnementsItem"
-        class="main-item"
+        class="header-item"
       />
     </Link>
-    <Link to="/Bonscadeaux" class="link">
-      <prismic-rich-text :field="slice.primary.BonsItem" class="main-item" />
+    <Link
+      ref="link"
+      to="/Bonscadeaux"
+      :lineColor="state.white ? mainColor : whiteColor"
+      bottom="25%"
+    >
+      <prismic-rich-text :field="slice.primary.BonsItem" class="header-item" />
     </Link>
   </div>
 </template>
 
 <script>
 import Link from '../../components/animations/Link/Link.vue'
+import { colors } from './../../theme/colors/colors'
 
 export default {
   name: 'Header',
@@ -49,13 +73,29 @@ export default {
     },
   },
 
+  data() {
+    return {
+      state: this.$store.getters,
+      scrollYLimit: 100,
+      mainColor: colors.main,
+      whiteColor: colors.white,
+    }
+  },
+
   methods: {
     onEnter() {
-      this.$store.dispatch('onMouseEnterAction')
+      this.$store.dispatch('headerColorWhiteAction')
+      this.$store.dispatch('onPrestaLinkAction')
     },
 
     onLeave() {
-      this.$store.dispatch('onMouseLeaveAction')
+      if (window.scrollY < this.scrollYLimit) {
+        this.$store.dispatch('headerColorTransparentAction')
+        this.$store.dispatch('outPrestaLinkAction')
+      } else {
+        this.$store.dispatch('outPrestaLinkAction')
+        this.$store.dispatch('headerColorWhiteAction')
+      }
     },
   },
 }
@@ -64,5 +104,11 @@ export default {
 <style lang="scss" scoped>
 .link {
   margin: 0 20px;
+
+  .header-item {
+    height: 100%;
+    padding: 21px 0;
+    box-sizing: border-box;
+  }
 }
 </style>

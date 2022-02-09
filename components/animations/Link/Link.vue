@@ -1,13 +1,17 @@
 <template>
   <NuxtLink ref="links" :to="to" class="link">
-    <slot />
-    <span class="line"></span>
+    <div ref="container" @mouseenter="slideIn" @mouseleave="slideOut">
+      <slot />
+      <span ref="line" class="line"></span>
+    </div>
   </NuxtLink>
 </template>
 
 <script>
 import GSAP from 'gsap'
-/* import { ref } from '@vue/reactivity' */
+import { ref } from '@vue/reactivity'
+
+import { colors } from './../../../theme/colors/colors'
 
 export default {
   props: {
@@ -16,20 +20,47 @@ export default {
       type: String,
       require: true,
     },
+    lineColor: {
+      default: colors.white,
+      type: String,
+      require: false,
+    },
+    bottom: {
+      default: '-10%',
+      type: String,
+      require: false,
+    },
+  },
+
+  data() {
+    return {
+      line: ref(null),
+      state: this.$store.getters,
+    }
+  },
+
+  mounted() {
+    this.line.value = this.$refs.line
+    this.line.value.style.bottom = this.$props.bottom
   },
 
   methods: {
-    slideIn(line) {
-      GSAP.to(line, {
+    slideIn() {
+      GSAP.to(this.line.value, {
         x: `0%`,
+        backgroundColor: this.$props.lineColor,
         duration: 0.7,
       })
     },
 
     slideOut() {
       GSAP.to(this.line.value, {
-        x: `201%`,
+        x: `-101%`,
         duration: 0.7,
+        backgroundColor: this.$props.lineColor,
+        onComplete: () => {
+          this.line.value.style.transform = 'translate(-101%, 0px)'
+        },
       })
     },
   },
@@ -40,11 +71,11 @@ export default {
 div {
   width: 100%;
   height: fit-content;
+  position: relative;
 
   .link {
     position: relative;
     z-index: 5;
-    color: white;
     overflow: hidden;
 
     .line {
@@ -52,17 +83,11 @@ div {
       width: 100%;
       display: inline-block;
       position: absolute;
-      bottom: 5px;
-      background-color: $white-color;
+      bottom: -10%;
+      z-index: 999;
       transform: translate(-101%, 0);
+      background-color: $white-color;
     }
-
-    /* &:hover {
-      .line {
-        transform: translate(0%, 0);
-        transition: 300ms linear;
-      }
-    } */
   }
 }
 </style>

@@ -41,5 +41,14 @@ export default {
 
 .sous-cat-link {
   color: $main-color;
+
+  &:hover {
+    transform: translateX(5%);
+    transition: $transition;
+  }
+
+  div {
+    margin: 3px 0;
+  }
 }
 </style>

@@ -22,28 +22,39 @@
             :key="`slice-item-${i}`"
             class="home--presta-cat"
           >
-            <div ref="items" class="presta-cat-icon">
-              <prismic-rich-text :field="item.prestaCat" class="presta-cat" />
-              <DefaultSvg
-                :width="16"
-                :height="16"
-                :icon-color="mainColor"
-                viewbox="0 0 16 16"
-                class="appear"
-              >
-                <IconMore />
-              </DefaultSvg>
-              <DefaultSvg
-                :width="16"
-                :height="2"
-                :icon-color="mainColor"
-                viewbox="0 0 16 2"
-                class="disappear"
-              >
-                <IconLess />
-              </DefaultSvg>
+            <div ref="items">
+              <div class="presta-cat-icon">
+                <prismic-rich-text :field="item.prestaCat" class="presta-cat" />
+                <div ref="iconMore" class="appear">
+                  <DefaultSvg
+                    :width="16"
+                    :height="16"
+                    :icon-color="mainColor"
+                    viewbox="0 0 16 16"
+                  >
+                    <IconMore />
+                  </DefaultSvg>
+                </div>
+                <div ref="iconLess" class="disappear">
+                  <DefaultSvg
+                    :width="16"
+                    :height="2"
+                    :icon-color="mainColor"
+                    viewbox="0 0 16 2"
+                  >
+                    <IconLess />
+                  </DefaultSvg>
+                </div>
+              </div>
+              <span class="line"></span>
+              <div ref="subCategory" class="sub-cat-prestas">
+                <slice-zone
+                  type="subcatpreta"
+                  queryType="repeat"
+                  :uid="`${i}`"
+                />
+              </div>
             </div>
-            <span class="line"></span>
           </div>
         </div>
       </div>
@@ -53,6 +64,7 @@
 
 <script>
 import { ref } from '@vue/reactivity'
+import SliceZone from 'vue-slicezone'
 import GSAP from 'gsap'
 
 import DefaultSvg from './../../components/assets/Svg/DefaultSvg.vue'
@@ -66,6 +78,7 @@ export default {
     DefaultSvg,
     IconMore,
     IconLess,
+    SliceZone,
   },
 
   props: {
@@ -80,93 +93,149 @@ export default {
 
   data() {
     return {
-      items: ref(null),
-      img: ref(null),
-      obj: [],
+      category: ref(null),
+      image: ref(null),
+      iconMore: ref(null),
+      iconLess: ref(null),
+      subCategory: ref(null),
+      prestations: ref([]),
+      activeImgId: ref(null),
+      activeCatId: ref(null),
       mainColor: colors.main,
     }
   },
 
   mounted() {
-    this.items = this.$refs.items
-    this.img = this.$refs.img
-    this.createObject(0)
-    this.active()
-    this.inactive()
-    this.scaleUp()
+    this.category = this.$refs.items
+    this.image = this.$refs.img
+    this.iconMore = this.$refs.iconMore
+    this.iconLess = this.$refs.iconLess
+    this.subCategory = this.$refs.subCategory
+
+    for (let i = 0; i < this.$props.slice.items.length; i++) {
+      this.prestations.value.push(
+        this.createObject(
+          this.category[i],
+          this.image[i],
+          this.iconMore[i],
+          this.iconLess[i],
+          this.subCategory[i]
+        )
+      )
+    }
+
+    this.onHover()
+    this.setActiveImgId()
+    this.onLeave()
+    this.onClick()
   },
 
   methods: {
-    createObject(start) {
-      return this.items.map((item) => {
-        return this.obj.push({
-          item,
-          presta: item.childNodes[0],
-          iconMore: item.childNodes[2],
-          iconLess: item.childNodes[4],
-          img: this.img[start++],
-          active: ref(false),
+    createObject(category, image, iconMore, iconLess, subCategory) {
+      return {
+        category,
+        image,
+        iconMore,
+        iconLess,
+        subCategory,
+      }
+    },
+
+    onHover() {
+      this.prestations.value.forEach((item) => {
+        item.category.addEventListener('mouseenter', () => {
+          const added = 1
+          let start = 0
+          const zIndex = (start += added)
+          this.appearImg(item.image, zIndex)
         })
       })
     },
 
-    active() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseenter', () => {
-          item.active.value = true
-          this.setValue()
+    appearImg(img, zIndex) {
+      GSAP.to(img, {
+        zIndex,
+      })
+    },
+
+    setActiveImgId() {
+      this.activeImgId.value = this.activeCatId.value
+    },
+
+    onLeave() {
+      this.prestations.value.forEach((item) => {
+        item.category.addEventListener('mouseleave', () => {
+          GSAP.to(this.activeImgId.value, {
+            zIndex: 1,
+            duration: 0.5,
+          })
         })
       })
     },
 
-    inactive() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseleave', () => {
-          item.active.value = false
-          this.setValue()
-        })
+    setActiveCatId(item) {
+      this.activeCatId.value = this.prestations.value.indexOf(item)
+    },
+
+    displaySubCat(subCategory) {
+      GSAP.to(subCategory, {
+        display: 'block',
+        duration: 0.5,
       })
     },
 
-    setValue() {
-      this.obj.forEach((item) => {
-        if (item.active.value) {
-          item.iconMore.classList.add('disappear')
-          item.iconMore.classList.remove('appear')
-          item.iconLess.classList.add('appear')
-          item.iconLess.classList.remove('disappear')
+    disableSubCat(subCategory) {
+      GSAP.to(subCategory, {
+        display: 'none',
+        duration: 0.5,
+      })
+    },
+
+    displayIconMore(iconMore) {
+      iconMore.style.display = 'block'
+    },
+
+    disableIconMore(iconMore) {
+      iconMore.style.display = 'none'
+    },
+
+    displayIconLess(iconLess) {
+      iconLess.style.display = 'block'
+    },
+
+    disableIconLess(iconLess) {
+      iconLess.style.display = 'none'
+    },
+
+    activeSubCat() {
+      for (let i = 0; i < this.prestations.value.length; i++) {
+        const subCategory = this.prestations.value[i].subCategory
+        const iconMore = this.prestations.value[i].iconMore
+        const iconLess = this.prestations.value[i].iconLess
+        const image = this.prestations.value[i].img
+
+        if (this.activeCatId.value === i) {
+          this.displaySubCat(subCategory)
+          this.displayIconMore(iconLess)
+          this.disableIconLess(iconMore)
+          this.appearImg(image)
         } else {
-          item.iconMore.classList.add('appear')
-          item.iconMore.classList.remove('disappear')
-          item.iconLess.classList.add('disappear')
-          item.iconLess.classList.remove('appear')
+          this.disableSubCat(subCategory)
+          this.disableIconMore(iconLess)
+          this.displayIconLess(iconMore)
         }
-      })
+      }
     },
 
-    scaleUp() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseenter', () => {
-          GSAP.to(item.img, {
-            zIndex: 1,
-            opacity: 1,
-            duration: 0.8,
-            onComplete: this.scaleDown(),
-          })
-        })
-      })
-    },
+    onClick() {
+      for (let i = 0; i < this.prestations.value.length; i++) {
+        const prestations = this.prestations.value[i]
 
-    scaleDown() {
-      this.obj.forEach((item) => {
-        item.item.addEventListener('mouseleave', () => {
-          GSAP.to(item.img, {
-            opacity: 0,
-            zIndex: 1,
-            duration: 0.8,
-          })
+        prestations.category.addEventListener('click', () => {
+          this.setActiveCatId(prestations)
+          this.activeSubCat()
         })
-      })
+      }
     },
   },
 }
@@ -323,6 +392,10 @@ export default {
             height: 1px;
             background: $main-color;
             margin-top: 12px;
+          }
+
+          .sub-cat-prestas {
+            display: none;
           }
         }
       }

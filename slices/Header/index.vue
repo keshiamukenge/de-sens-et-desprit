@@ -4,14 +4,14 @@
       ref="link"
       to="/"
       :lineColor="state.white ? mainColor : whiteColor"
-      bottom="25%"
+      :bottom="bottom"
     >
       <prismic-rich-text
         :field="slice.primary.acceuilItem"
         class="header-item"
       />
     </Link>
-    <Link ref="link" to="/Prestations" :lineColor="mainColor" bottom="25%">
+    <Link ref="link" to="/Prestations" :lineColor="mainColor" :bottom="bottom">
       <prismic-rich-text
         :field="slice.primary.prestationsItem"
         class="header-item"
@@ -23,7 +23,7 @@
       ref="link"
       to="/Prestations/Lumiere-pulsee"
       :lineColor="state.white ? mainColor : whiteColor"
-      bottom="25%"
+      :bottom="bottom"
     >
       <prismic-rich-text
         :field="slice.primary.lumiereHeaderItem"
@@ -34,7 +34,7 @@
       ref="link"
       to="/Abonnements"
       :lineColor="state.white ? mainColor : whiteColor"
-      bottom="25%"
+      :bottom="bottom"
     >
       <prismic-rich-text
         :field="slice.primary.abonnementsItem"
@@ -45,7 +45,7 @@
       ref="link"
       to="/Bonscadeaux"
       :lineColor="state.white ? mainColor : whiteColor"
-      bottom="25%"
+      :bottom="bottom"
     >
       <prismic-rich-text :field="slice.primary.BonsItem" class="header-item" />
     </Link>
@@ -79,6 +79,7 @@ export default {
       scrollYLimit: 100,
       mainColor: colors.main,
       whiteColor: colors.white,
+      bottom: '30%',
     }
   },
 

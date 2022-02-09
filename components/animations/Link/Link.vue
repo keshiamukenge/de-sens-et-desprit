@@ -26,7 +26,7 @@ export default {
       require: false,
     },
     bottom: {
-      default: '-10%',
+      default: '15%',
       type: String,
       require: false,
     },

@@ -70,7 +70,7 @@ export default {
 <style lang="scss" scoped>
 div {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   position: relative;
 
   .link {

@@ -1,46 +1,63 @@
 export const state = () => ({
     white: false,
-    hover: false
+    onPrestaLink: false,
+    onSubheader: false,
   })
   
   export const mutations = {
-    onMouseEnter(state) {
-        state.white = state.hover = true
+    headerColorWhite(state) {
+        state.white = true
     },
 
-    onMouseLeave(state) {
-        const scrollY = window.scrollY
-        if (scrollY < 50) {
-            state.white = state.hover = false
-        } else {
-            state.hover = false
-            state.white = true
-        }
+    headerColorTransparent(state) {
+        state.white = false
     },
 
-    onScroll(state) {
-        const scrollY = window.scrollY
-        if (scrollY < 50) {
-            state.white = false
-          } else {
-            state.white = true
-          }
-    }  
+    onSubHeader(state) {
+        state.onSubheader = true
+    },
+
+    outSubHeader(state) {
+        state.onSubheader = false
+    },
+
+    onPrestaLink(state) {
+        state.onPrestaLink = true
+    },
+
+    outPrestaLink(state) {
+        state.onPrestaLink = false
+    },
 }
 
 export const getters = {
     white: (state) => { return state.white },
-    hover: (state) => { return state.hover },
+    onPrestaLink: (state) => { return state.onPrestaLink },
+    onSubheader: (state) => { return state.onSubheader },
 }
 
 export const actions = {
-    onMouseEnterAction ({commit}) {
-        commit('onMouseEnter')
+    headerColorWhiteAction ({commit}) {
+        commit('headerColorWhite')
     },
-    onMouseLeaveAction ({commit}) {
-        commit('onMouseLeave')
+
+    headerColorTransparentAction ({commit}) {
+        commit('headerColorTransparent')
     },
-    onScrollAction({commit, page}) {
-        commit('onScroll')
-    }
+
+    onSubHeaderAction ({commit}) {
+        commit('onSubHeader')
+    },
+
+    outSubHeaderAction ({commit}) {
+        commit('outSubHeader')
+    },
+
+    onPrestaLinkAction ({commit}) {
+        commit('onPrestaLink')
+    },
+
+    outPrestaLinkAction ({commit}) {
+        commit('outPrestaLink')
+    },
 }

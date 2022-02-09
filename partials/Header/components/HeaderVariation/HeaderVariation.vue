@@ -1,8 +1,8 @@
 <template>
   <header
     :class="{
-      white: backgroundColor.white,
-      transparent: !backgroundColor.white,
+      white: state.white,
+      transparent: !state.white,
     }"
   >
     <div class="header--container-logo">
@@ -10,19 +10,23 @@
         <DefaultSvg
           :width="17"
           :height="43"
-          :icon-color="backgroundColor.white ? mainColor : whiteColor"
+          :icon-color="state.white ? mainColor : whiteColor"
           viewbox="0 0 17 43"
         >
           <Logo />
         </DefaultSvg>
       </Link>
     </div>
-    <slice-zone type="header" query-type="single" class="header--content" />
+    <slice-zone
+      type="header"
+      query-type="single"
+      class="header--content"
+    />
     <div class="header--container-icons-profile">
       <DefaultSvg
         :width="14"
         :height="18"
-        :icon-color="backgroundColor.white ? mainColor : whiteColor"
+        :icon-color="state.white ? mainColor : whiteColor"
         viewbox="0 0 14 18"
       >
         <IconUser />
@@ -30,7 +34,7 @@
       <DefaultSvg
         :width="20"
         :height="18"
-        :icon-color="backgroundColor.white ? mainColor : whiteColor"
+        :icon-color="state.white ? mainColor : whiteColor"
         viewbox="0 0 20 18"
       >
         <IconCart />
@@ -73,19 +77,24 @@ export default {
     return {
       mainColor: colors.main,
       whiteColor: colors.white,
-      backgroundColor: this.$store.getters,
+      state: this.$store.getters,
       prop: this.$props.defaultStyle,
+      scrollYLimit: 100,
     }
   },
 
   mounted() {
-    this.setBackgroundColor()
+    this.setstate()
   },
 
   methods: {
-    setBackgroundColor() {
+    setstate() {
       window.addEventListener('scroll', () => {
-        this.$store.dispatch('onScrollAction')
+        if (window.scrollY < this.scrollYLimit) {
+          this.$store.dispatch('headerColorTransparentAction')
+        } else {
+          this.$store.dispatch('headerColorWhiteAction')
+        }
       })
     },
   },
@@ -118,7 +127,6 @@ header {
       display: flex;
       align-items: center;
       height: 100%;
-      padding: 13px 0;
       box-sizing: border-box;
     }
   }
@@ -137,7 +145,7 @@ header {
   transition: $transition;
 
   .header--content {
-    .main-item {
+    .header-item {
       display: flex;
 
       p {
@@ -160,7 +168,7 @@ header {
   transition-delay: 0.55s;
 
   .header--content {
-    .main-item {
+    .header-item {
       p {
         color: $white-color;
         transition-delay: 0.55s;

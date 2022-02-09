@@ -63,6 +63,10 @@ export default {
       whiteColor: colors.white,
     }
   },
+
+  mounted() {
+    this.$store.dispatch('headerColorWhiteAction')
+  },
 }
 </script>
 
@@ -82,6 +86,8 @@ header {
   justify-content: space-between;
 
   .header--content {
+    height: 100%;
+
     .header--container-logo {
       height: 100%;
       width: 12px;
@@ -91,8 +97,12 @@ header {
       display: flex;
       align-items: center;
       height: 100%;
-      padding: 13px 0;
       box-sizing: border-box;
+
+      .link {
+        height: 100%;
+        padding: 13px 0;
+      }
     }
   }
 
@@ -110,7 +120,7 @@ header {
   transition: $transition;
 
   .header--content {
-    .main-item {
+    .header-item {
       display: flex;
 
       p {

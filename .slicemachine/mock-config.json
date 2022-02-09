@@ -291,7 +291,14 @@
     },
     "ImageSousMenu": {
       "default-slice": {
-        "primary": {}
+        "primary": {
+          "CatTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }

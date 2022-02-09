@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 .container-subheader-img {
   width: 100%;
-  height: 85%;
+  height: 70%;
 
   .subheader-img {
     width: 100%;

@@ -39,10 +39,6 @@ div {
 
   .subcat-link {
     overflow: hidden;
-
-    /* .subcat-text {
-      transform: translateY(-20px);
-    } */
   }
 }
 </style>

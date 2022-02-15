@@ -24,14 +24,6 @@ export default {
       },
     },
   },
-
-  data() {
-    return {
-      rootMargin: '100px 0px',
-    }
-  },
-
-  methods: {},
 }
 </script>
 

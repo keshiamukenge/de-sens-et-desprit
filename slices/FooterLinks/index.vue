@@ -39,7 +39,10 @@
     </div>
     <div class="container-newsletter">
       <prismic-rich-text :field="slice.primary.NewsletterTitle" />
-      <input />
+      <div class="container-input-newsletter">
+        <input />
+        <Button :primary="false" content="S'inscrire" class="btn-newsletter" />
+      </div>
       <div class="container-rs">
         <prismic-link :field="slice.primary.InstagramLink" class="insta-link">
           <prismic-rich-text :field="slice.primary.InstagramTitle" />
@@ -54,12 +57,14 @@
 
 <script>
 import Link from '../../components/animations/Link/Link.vue'
+import Button from './../../components/Button/Button.vue'
 
 export default {
   name: 'FooterLinks',
 
   components: {
     Link,
+    Button,
   },
 
   props: {
@@ -109,9 +114,19 @@ export default {
   }
 
   .container-newsletter {
-    input {
-      margin-bottom: 50px;
+    .container-input-newsletter {
+      display: flex;
+      align-items: flex-start;
       width: 100%;
+
+      input {
+        margin: 0 20px 50px 0;
+        width: 70%;
+      }
+
+      .btn-newsletter {
+        width: 30%;
+      }
     }
 
     .container-rs {

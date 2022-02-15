@@ -49,17 +49,18 @@ html {
       color: $white-color;
       font-family: $font--input;
       font-size: $font--size-input;
+      height: 33px;
 
       &:active,
       &:focus,
       &:focus-visible {
-        border-top: 0;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 1px;
-        border-bottom-style: dashed;
-        border-bottom-color: $white-color;
+        border-bottom: 1px solid $white-color;
+        outline: none;
       }
+    }
+
+    input[type='text'] {
+      font-size: $font--size-input;
     }
   }
 }

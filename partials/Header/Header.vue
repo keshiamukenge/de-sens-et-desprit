@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="defaultHeader.value">
+    <div v-if="defaultStyle">
       <HeaderDefault></HeaderDefault>
     </div>
     <div v-else>
@@ -10,8 +10,6 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
-
 import HeaderDefault from './components/HeaderDefault/HeaderDefault'
 import HeaderVariation from './components/HeaderVariation/HeaderVariation'
 
@@ -27,13 +25,7 @@ export default {
       type: Boolean,
     },
   },
-
-  data() {
-    return {
-      defaultHeader: ref(this.$props.defaultStyle),
-    }
-  },
 }
 </script>
 
-<style lang="scss"></style>
+<style></style>

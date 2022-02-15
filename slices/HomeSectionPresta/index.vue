@@ -56,6 +56,7 @@
               </div>
             </div>
           </div>
+          <Button class="btn-presta" />
         </div>
       </div>
     </div>
@@ -70,6 +71,7 @@ import GSAP from 'gsap'
 import DefaultSvg from './../../components/assets/Svg/DefaultSvg.vue'
 import IconMore from './../../components/assets/Svg/Icons/More/More.vue'
 import IconLess from './../../components/assets/Svg/Icons/Less/Less.vue'
+import Button from './../../components/Button/Button.vue'
 import { colors } from './../../theme/colors/colors'
 
 export default {
@@ -79,6 +81,7 @@ export default {
     IconMore,
     IconLess,
     SliceZone,
+    Button,
   },
 
   props: {
@@ -397,6 +400,10 @@ export default {
           .sub-cat-prestas {
             display: none;
           }
+        }
+
+        .btn-presta {
+          float: right;
         }
       }
     }

@@ -28,6 +28,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  
   props: {
     slice: {
       type: Object,
